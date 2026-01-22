@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import Balancer from "react-wrap-balancer";
 import { Input } from "../ui/input";
+import Link from "next/link";
 
 // Funktion der returnerer hvad et beløb svarer til
 function getDonationImpact(amount: number): string {
@@ -127,8 +128,10 @@ function Hero() {
                             )}
                         </div>
 
-                        <Button size="lg" className="w-full mt-auto" disabled={!selectedAmount || selectedAmount === 0}>
-                            {selectedAmount ? `Doner ${selectedAmount} kr` : "Doner nu"}
+                        <Button size="lg" className="w-full mt-auto" disabled={!selectedAmount || selectedAmount === 0} asChild>
+                            <Link href="/stotte-os">
+                                {selectedAmount ? `Doner ${selectedAmount} kr` : "Doner nu"}
+                            </Link>
                         </Button>
                     </div>
 
