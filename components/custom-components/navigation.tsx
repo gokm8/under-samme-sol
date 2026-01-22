@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Nav } from "../ds";
-import { Button } from "./button";
+import { Button } from "../ui/button";
 
 type NavItem = {
     href: string;
