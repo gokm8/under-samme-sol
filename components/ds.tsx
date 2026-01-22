@@ -88,7 +88,7 @@ export const Nav = ({
         <div
             id="nav-container"
             className={cn(
-                "max-w-5xl mx-auto px-4 sm:px-6 py-2",
+                "mx-auto pl-4",
                 containerClassName
             )}>
             {children}
