@@ -5,6 +5,7 @@ import Image from "next/image";
 import { VoresIndsatser } from "@/components/custom-components/vores-indsatser";
 import { CtaStot } from "@/components/custom-components/cta-stot";
 import { VoresMission } from "@/components/custom-components/vores-mission";
+import { KontaktOs } from "@/components/custom-components/kontakt-os";
 
 
 export default function Home() {
@@ -44,6 +45,10 @@ export default function Home() {
       </Section>
 
       <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" reverse />
+
+      <Section id="kontakt-os" className="scroll-mt-20">
+        <KontaktOs />
+      </Section>
     </>
   );
 }
