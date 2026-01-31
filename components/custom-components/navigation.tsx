@@ -57,7 +57,7 @@ function Navigation({ items, className }: NavigationProps) {
                     <Button
                         variant="default"
                         size="lg"
-                        className="rounded-none text-lg h-12 px-6"
+                        className="rounded-none text-lg h-12 px-6 text-bold"
                         asChild
                     >
                         <Link href="/stotte-os">STØT</Link>
@@ -102,7 +102,7 @@ function Navigation({ items, className }: NavigationProps) {
                                     <Button
                                         variant="default"
                                         size="lg"
-                                        className="rounded-none text-lg h-12 w-full"
+                                        className="rounded-none text-lg h-12 w-full text-bold"
                                         asChild
                                     >
                                         <Link href="/stotte-os">STØT</Link>
