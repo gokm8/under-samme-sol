@@ -3,6 +3,7 @@ import Hero from "@/components/custom-components/hero";
 import LogoLoop from "@/components/LogoLoop";
 import Image from "next/image";
 import { VoresIndsatser } from "@/components/custom-components/vores-indsatser";
+import { CtaStot } from "@/components/custom-components/cta-stot";
 
 
 export default function Home() {
@@ -34,6 +35,8 @@ export default function Home() {
       <Section>
         <VoresIndsatser />
       </Section>
+
+      <CtaStot />
     </>
   );
 }
