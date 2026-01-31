@@ -4,6 +4,7 @@ import LogoLoop from "@/components/LogoLoop";
 import Image from "next/image";
 import { VoresIndsatser } from "@/components/custom-components/vores-indsatser";
 import { CtaStot } from "@/components/custom-components/cta-stot";
+import { VoresMission } from "@/components/custom-components/vores-mission";
 
 
 export default function Home() {
@@ -32,11 +33,17 @@ export default function Home() {
         />
       </Section>
 
-      <Section>
+      <Section id="vores-indsats" className="scroll-mt-20">
         <VoresIndsatser />
       </Section>
 
       <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" />
+
+      <Section id="vores-mission" className="scroll-mt-20">
+        <VoresMission />
+      </Section>
+
+      <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" reverse />
     </>
   );
 }

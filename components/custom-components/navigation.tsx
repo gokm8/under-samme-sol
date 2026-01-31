@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Nav } from "../ds";
 import { Button } from "../ui/button";
@@ -27,6 +28,16 @@ type NavigationProps = {
 
 function Navigation({ items, className }: NavigationProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (href.startsWith("#") && pathname === "/") {
+            e.preventDefault();
+            const id = href.slice(1);
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+            setIsOpen(false);
+        }
+    };
 
     return (
         <Nav className={cn("sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60", className)}>
@@ -45,12 +56,22 @@ function Navigation({ items, className }: NavigationProps) {
                     <ul className="flex gap-6">
                         {items.map((item) => (
                             <li key={item.href}>
-                                <Link
-                                    href={item.href}
-                                    className="text-base font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                                >
-                                    {item.label}
-                                </Link>
+                                {item.href.startsWith("#") ? (
+                                    <a
+                                        href={item.href}
+                                        onClick={(e) => handleHashClick(e, item.href)}
+                                        className="text-base font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                                    >
+                                        {item.label}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        href={item.href}
+                                        className="text-base font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>
@@ -87,14 +108,26 @@ function Navigation({ items, className }: NavigationProps) {
                                 <ul className="flex flex-col gap-4">
                                     {items.map((item) => (
                                         <li key={item.href}>
-                                            <SheetClose asChild>
-                                                <Link
-                                                    href={item.href}
-                                                    className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2"
-                                                >
-                                                    {item.label}
-                                                </Link>
-                                            </SheetClose>
+                                            {item.href.startsWith("#") ? (
+                                                <SheetClose asChild>
+                                                    <a
+                                                        href={item.href}
+                                                        onClick={(e) => handleHashClick(e, item.href)}
+                                                        className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2"
+                                                    >
+                                                        {item.label}
+                                                    </a>
+                                                </SheetClose>
+                                            ) : (
+                                                <SheetClose asChild>
+                                                    <Link
+                                                        href={item.href}
+                                                        className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2"
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                </SheetClose>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
