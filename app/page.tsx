@@ -36,7 +36,7 @@ export default function Home() {
         <VoresIndsatser />
       </Section>
 
-      <CtaStot />
+      <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" />
     </>
   );
 }
