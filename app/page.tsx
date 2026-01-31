@@ -6,6 +6,7 @@ import { VoresIndsatser } from "@/components/custom-components/vores-indsatser";
 import { CtaStot } from "@/components/custom-components/cta-stot";
 import { VoresMission } from "@/components/custom-components/vores-mission";
 import { KontaktOs } from "@/components/custom-components/kontakt-os";
+import { Footer } from "@/components/custom-components/footer";
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <Section className="p-0!">
+      <Section id="hero" className="p-0! scroll-mt-0">
         <Hero />
       </Section>
 
@@ -49,6 +50,8 @@ export default function Home() {
       <Section id="kontakt-os" className="scroll-mt-20">
         <KontaktOs />
       </Section>
+
+      <Footer />
     </>
   );
 }
