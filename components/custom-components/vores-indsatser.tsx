@@ -1,76 +1,47 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "../ds";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge"
-
-const indsatser = [
-    {
-        title: "Fællesskab & Inklusion",
-        description: "Vi skaber trygge mødesteder, hvor alle føler sig velkomne. Gennem fælles aktiviteter og arrangementer styrker vi sammenhængskraften i lokalsamfundet.",
-        image: "/logo-placeholder.jpg",
-        alt: "Fællesskab",
-    },
-    {
-        title: "Bæredygtighed",
-        description: "Vi arbejder for en grønnere fremtid med projekter inden for genbrug, energibesparelse og bevidst forbrug. Små skridt med stor betydning.",
-        image: "/logo-placeholder.jpg",
-        alt: "Bæredygtighed",
-    },
-    {
-        title: "Uddannelse & Læring",
-        description: "Vi tilbyder kurser og workshops for alle aldre – fra børn til seniorer. Viden deles, kompetencer udvikles, og nye muligheder åbner sig.",
-        image: "/logo-placeholder.jpg",
-        alt: "Uddannelse",
-    },
-];
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export function VoresIndsatser() {
     return (
-        <Container>
-            <div className="space-y-4 text-center mb-8 sm:mb-10">
+        <Container className="">
+            <div className="space-y-6 text-center mb-8 sm:mb-10">
                 <Badge variant="default" className="mb-2">
-                    Vores fokus
+                    Kernefortælling
                 </Badge>
-                <h2 className="text-2xl font-bold sm:text-3xl">Sådan gør vi forskel</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
-                    Vi arbejder på tværs af flere områder for at gøre en reel forskel i lokalsamfundet.
-                </p>
+                <h2 className="text-2xl font-bold sm:text-3xl">Kernefortælling</h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {indsatser.map((indsats) => (
-                    <Card
-                        key={indsats.title}
-                        className="flex flex-col overflow-hidden transition-shadow hover:shadow-md"
-                    >
-                        <CardHeader className="p-0">
-                            <div className="relative w-full aspect-16/10 sm:aspect-video overflow-hidden rounded-t-xl bg-muted">
-                                <Image
-                                    src={indsats.image}
-                                    alt={indsats.alt}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                />
-                            </div>
-                            <div className="px-6 pt-4">
-                                <CardTitle className="text-lg sm:text-xl">
-                                    {indsats.title}
-                                </CardTitle>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-1 px-6 pb-6">
-                            <CardDescription className="text-sm sm:text-base text-left">
-                                {indsats.description}
-                            </CardDescription>
-                        </CardContent>
-                    </Card>
-                ))}
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+                {/* Venstre: tekst + CTA */}
+                <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10 text-left bg-card order-2 lg:order-1">
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4">
+                        Under Samme Sol er en forening, der bygger på en enkel, men stærk idé: at vi alle lever under den samme sol – og derfor også deler et ansvar for hinanden.
+                    </p>
+                    <p className="text-foreground text-sm sm:text-base leading-relaxed mb-4">
+                        I Østtyrkiet lever mange børn under svære vilkår. Vi kan ikke ændre alt. Men vi kan ændre noget. Derfor indsamler vi, så fællesskab bliver til handling – og så mennesker i Danmark kan gøre en konkret forskel for børn, der ellers står uden støtte.
+                    </p>
+                    <p className="text-foreground font-medium text-sm sm:text-base mb-6">
+                        Vi gør det, fordi vi kan. Og fordi vi er Under Samme Sol.
+                    </p>
+                    <Button asChild size="lg" className="w-full sm:w-fit font-semibold">
+                        <Link href="#kontakt-os">Bliv fast støtte</Link>
+                    </Button>
+                </div>
+
+                {/* Højre: billede */}
+                <div className="relative min-h-[240px] sm:min-h-[320px] lg:min-h-0 aspect-video lg:aspect-auto bg-muted order-1 lg:order-2">
+                    <Image
+                        src="/hero-section.jpg"
+                        alt="Under Samme Sol – børn og familier, der får støtte og tryghed"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        priority={false}
+                    />
+                </div>
             </div>
         </Container>
     );
