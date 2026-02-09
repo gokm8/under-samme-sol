@@ -32,7 +32,7 @@ const mission = [
 
 export function VoresMission() {
     return (
-        <Container>
+        <Container >
             <div className="space-y-4 text-center mb-8 sm:mb-10">
                 <Badge variant="default" className="mb-2">
                     Vores mission

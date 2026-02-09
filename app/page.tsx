@@ -35,17 +35,19 @@ export default function Home() {
         />
       </Section>
 
+      <Section id="vores-indsats" className="scroll-mt-20">
+        <VoresIndsatser />
+      </Section>
+
+
+
+
+      <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" />
+
       <Section id="vores-mission" className="scroll-mt-20">
         <VoresMission />
       </Section>
 
-      <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" />
-
-
-
-      <Section id="vores-indsats" className="scroll-mt-20">
-        <VoresIndsatser />
-      </Section>
 
       <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" reverse />
 

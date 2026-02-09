@@ -8,10 +8,8 @@ export function VoresIndsatser() {
     return (
         <Container className="">
             <div className="space-y-6 text-center mb-8 sm:mb-10">
-                <Badge variant="default" className="mb-2">
-                    Kernefortælling
-                </Badge>
-                <h2 className="text-2xl font-bold sm:text-3xl">Kernefortælling</h2>
+
+                <h2 className="text-2xl font-bold sm:text-3xl">Vores mission</h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl border border-border bg-card shadow-sm">

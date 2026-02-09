@@ -72,7 +72,7 @@ function Hero() {
 
                         <p className="text-lg text-white/90 md:text-xl ">
                             <Balancer>
-                                Under Samme Sol arbejder for støtte og tryghed til børn og familier i Mellemøsten.
+                                Under Samme Sol arbejder for støtte og tryghed til børn og familier i Østtyrkiet.
                             </Balancer>
                         </p>
                     </div>
