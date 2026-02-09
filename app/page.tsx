@@ -51,9 +51,9 @@ export default function Home() {
 
       <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" reverse />
 
-      <Section id="kontakt-os" className="scroll-mt-20">
+      {/* <Section id="kontakt-os" className="scroll-mt-20">
         <KontaktOs />
-      </Section>
+      </Section> */}
 
       <Footer />
     </>
