@@ -53,7 +53,7 @@ function Navigation({ items, className }: NavigationProps) {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-8" aria-label="Hovednavigation">
-                    <ul className="flex gap-6">
+                    <ul className="flex gap-12">
                         {items.map((item) => (
                             <li key={item.href}>
                                 {item.href.startsWith("#") ? (
@@ -78,7 +78,7 @@ function Navigation({ items, className }: NavigationProps) {
                     <Button
                         variant="default"
                         size="lg"
-                        className="rounded-none text-lg h-12 px-6 text-bold"
+                        className="rounded-md text-lg h-12 px-6 text-bold"
                         asChild
                     >
                         <Link href="/stotte-os">STØT</Link>
@@ -100,11 +100,11 @@ function Navigation({ items, className }: NavigationProps) {
                         </SheetTrigger>
                         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                             <SheetHeader>
-                                <SheetTitle className="text-xl font-bold">
+                                <SheetTitle className="text-xl font-bold text-center">
                                     UNDER SAMME SOL
                                 </SheetTitle>
                             </SheetHeader>
-                            <nav className="flex flex-col gap-6 mt-8" aria-label="Mobil navigation">
+                            <nav className="flex flex-col gap-6 mt-8 text-center" aria-label="Mobil navigation">
                                 <ul className="flex flex-col gap-4">
                                     {items.map((item) => (
                                         <li key={item.href}>
@@ -113,7 +113,7 @@ function Navigation({ items, className }: NavigationProps) {
                                                     <a
                                                         href={item.href}
                                                         onClick={(e) => handleHashClick(e, item.href)}
-                                                        className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2"
+                                                        className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2 text-center w-full"
                                                     >
                                                         {item.label}
                                                     </a>
@@ -122,7 +122,7 @@ function Navigation({ items, className }: NavigationProps) {
                                                 <SheetClose asChild>
                                                     <Link
                                                         href={item.href}
-                                                        className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2"
+                                                        className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm block py-2 text-center w-full"
                                                     >
                                                         {item.label}
                                                     </Link>
