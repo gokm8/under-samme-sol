@@ -34,9 +34,7 @@ export function VoresMission() {
     return (
         <Container >
             <div className="space-y-4 text-center mb-8 sm:mb-10">
-                <Badge variant="default" className="mb-2">
-                    Vores mission
-                </Badge>
+
                 <h2 className="text-2xl font-bold sm:text-3xl">Vores mission</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
                     Vi arbejder på tværs af flere områder for at gøre en reel forskel i lokalsamfundet.

@@ -10,14 +10,14 @@ import Link from "next/link";
 
 // Funktion der returnerer hvad et beløb svarer til
 function getDonationImpact(amount: number): string {
-    if (amount >= 500) {
+    if (amount >= 550) {
         return "støtter familiens månedlige madbudget";
-    } else if (amount >= 250) {
-        return "giver skolematerialer til 5 børn";
-    } else if (amount >= 100) {
-        return "sikrer medicin til 2 børn i en måned";
-    } else if (amount >= 50) {
-        return "giver et varmt måltid til 10 børn";
+    } else if (amount >= 235) {
+        return "kan du give en familie ro og tryghed med en madkasse, der sikrer mad på bordet";
+    } else if (amount >= 105) {
+        return "kan et barn få nye støvler og en varm jakke til de kolde vintermåneder";
+    } else if (amount >= 60) {
+        return "kan et barn eksempelvis få vigtige skoleredskaber – som skoletaske og penalhus";
     } else if (amount > 0) {
         return "gør en forskel for børn og familier";
     }
@@ -91,7 +91,7 @@ function Hero() {
                             {/* Amount options */}
                             <div className="mb-6 flex flex-col gap-3">
                                 <div className="grid grid-cols-2 gap-3">
-                                    {["50", "100", "250", "500"].map((amount) => {
+                                    {["60", "105", "235", "550"].map((amount) => {
                                         const isSelected = selectedAmount === parseInt(amount) && !customAmount;
                                         return (
                                             <Button
