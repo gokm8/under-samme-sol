@@ -60,14 +60,14 @@ function Navigation({ items, className }: NavigationProps) {
                                     <a
                                         href={item.href}
                                         onClick={(e) => handleHashClick(e, item.href)}
-                                        className="text-base font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                                        className="text-xl font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                                     >
                                         {item.label}
                                     </a>
                                 ) : (
                                     <Link
                                         href={item.href}
-                                        className="text-base font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                                        className="text-2xl font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                                     >
                                         {item.label}
                                     </Link>
@@ -78,7 +78,7 @@ function Navigation({ items, className }: NavigationProps) {
                     <Button
                         variant="default"
                         size="lg"
-                        className="rounded-md text-lg h-12 px-6 text-bold"
+                        className="rounded-md text-2xl h-12 px-8 text-bold"
                         asChild
                     >
                         <Link href="/stotte-os">STØT</Link>
