@@ -25,7 +25,7 @@ function getDonationImpact(amount: number): string {
 }
 
 function Hero() {
-    const [selectedAmount, setSelectedAmount] = useState<number | null>(50);
+    const [selectedAmount, setSelectedAmount] = useState<number | null>(60);
     const [customAmount, setCustomAmount] = useState<string>("");
 
     const handleAmountClick = (amount: string) => {
