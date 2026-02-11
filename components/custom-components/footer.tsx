@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
 
@@ -42,9 +43,16 @@ export function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity block"
+              className="flex items-center gap-2 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity w-fit"
               aria-label="Gå til forsiden"
             >
+              <Image
+                src="/images/logo.png"
+                alt=""
+                width={36}
+                height={36}
+                className="h-18 w-18 object-contain"
+              />
               UNDER SAMME SOL
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">

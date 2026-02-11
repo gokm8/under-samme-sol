@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { useState } from "react";
@@ -45,9 +46,16 @@ function Navigation({ items, className }: NavigationProps) {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+                    className="flex items-center gap-2 text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
                     aria-label="Gå til forsiden"
                 >
+                    <Image
+                        src="/images/logo.png"
+                        alt=""
+                        width={40}
+                        height={40}
+                        className="h-18 w-18 object-contain"
+                    />
                     UNDER SAMME SOL
                 </Link>
 

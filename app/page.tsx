@@ -14,9 +14,9 @@ export default function Home() {
 
   // Alternative with image sources
   const techLogos = [
-    { src: "/logo-placeholder.jpg", alt: "Company 1" },
-    { src: "/logo-placeholder.jpg", alt: "Company 2" },
-    { src: "/logo-placeholder.jpg", alt: "Company 3" },
+    { src: "/images/din-virksomhed.png", alt: "Company 1" },
+    { src: "/images/din-virksomhed.png", alt: "Company 2" },
+    { src: "/images/din-virksomhed.png", alt: "Company 3" },
   ];
 
   return (
