@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import Balancer from "react-wrap-balancer";
 import { Input } from "../ui/input";
-import Link from "next/link";
 
 // Funktion der returnerer hvad et beløb svarer til
 function getDonationImpact(amount: number): string {
@@ -27,10 +26,13 @@ function getDonationImpact(amount: number): string {
 function Hero() {
     const [selectedAmount, setSelectedAmount] = useState<number | null>(60);
     const [customAmount, setCustomAmount] = useState<string>("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleAmountClick = (amount: string) => {
         setSelectedAmount(parseInt(amount));
         setCustomAmount("");
+        setError(null);
     };
 
     const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,10 +43,35 @@ function Hero() {
         } else {
             setSelectedAmount(null);
         }
+        setError(null);
     };
 
     const displayAmount = selectedAmount ?? 0;
     const impact = getDonationImpact(displayAmount);
+
+    async function handleStot() {
+        if (!selectedAmount || selectedAmount < 10) return;
+        setError(null);
+        setLoading(true);
+        try {
+            const res = await fetch("/api/create-checkout-session", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ amount: selectedAmount }),
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                setError(data.error ?? "Noget gik galt");
+                return;
+            }
+            if (data.url) window.location.href = data.url;
+            else setError("Kunne ikke starte betaling");
+        } catch {
+            setError("Kunne ikke oprette betaling – prøv igen");
+        } finally {
+            setLoading(false);
+        }
+    }
     return (
         <section className="relative min-h-[90vh] lg:h-[90vh] ">
             {/* Background image */}
@@ -126,12 +153,21 @@ function Hero() {
                                     </p>
                                 </div>
                             )}
+
+                            {error && (
+                                <p className="mb-4 text-sm text-red-200" role="alert">
+                                    {error}
+                                </p>
+                            )}
                         </div>
 
-                        <Button size="lg" className="w-full mt-auto" disabled={!selectedAmount || selectedAmount === 0} asChild>
-                            <Link href="/stotte-os">
-                                {selectedAmount ? `Doner ${selectedAmount} kr` : "Doner nu"}
-                            </Link>
+                        <Button
+                            size="lg"
+                            className="w-full mt-auto"
+                            disabled={!selectedAmount || selectedAmount < 10 || loading}
+                            onClick={handleStot}
+                        >
+                            {loading ? "Venter..." : selectedAmount ? `Doner ${selectedAmount} kr` : "Doner nu"}
                         </Button>
                     </div>
 

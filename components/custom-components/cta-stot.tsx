@@ -19,7 +19,7 @@ export function CtaStot({
     title = "Din støtte kan gøre en forskel",
     description = "Hver eneste donation går ubeskåret til dér, hvor behovet er størst hos børn og familier i nød",
     buttonText = "STØT",
-    buttonHref = "#",
+    buttonHref = "/stotte-os",
     imageSrc,
     imageAlt = "Billede",
     reverse = false,

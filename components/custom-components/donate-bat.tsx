@@ -9,6 +9,8 @@ export default function DonateBar() {
 
     const [selected, setSelected] = useState<number>(100);
     const [custom, setCustom] = useState<string>("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const amount = useMemo(() => {
         const customValue = Number(custom);
@@ -17,6 +19,29 @@ export default function DonateBar() {
         }
         return selected;
     }, [custom, selected]);
+
+    async function handleDonate() {
+        setError(null);
+        setLoading(true);
+        try {
+            const res = await fetch("/api/create-checkout-session", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ amount: amount }),
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                setError(data.error ?? "Noget gik galt");
+                return;
+            }
+            if (data.url) window.location.href = data.url;
+            else setError("Kunne ikke starte betaling");
+        } catch {
+            setError("Kunne ikke oprette betaling – prøv igen");
+        } finally {
+            setLoading(false);
+        }
+    }
 
     return (
         <div className="w-full max-w-3xl rounded-2xl bg-white/10 p-4 text-white backdrop-blur md:p-5">
@@ -67,11 +92,22 @@ export default function DonateBar() {
 
                 {/* Right: CTA */}
                 <div className="md:pl-2">
-                    <Button size="lg" className="w-full rounded-full md:w-auto">
-                        Donér nu
+                    <Button
+                        size="lg"
+                        className="w-full rounded-full md:w-auto"
+                        onClick={handleDonate}
+                        disabled={loading}
+                    >
+                        {loading ? "Venter..." : "Donér nu"}
                     </Button>
                 </div>
             </div>
+
+            {error && (
+                <p className="mt-2 text-sm text-red-200" role="alert">
+                    {error}
+                </p>
+            )}
 
             {/* Optional trust line */}
             <p className="mt-3 text-xs text-white/70">
