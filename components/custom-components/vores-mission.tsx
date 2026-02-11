@@ -10,29 +10,32 @@ import {
 import { Badge } from "@/components/ui/badge"
 
 const mission = [
-    {
-        title: "Skolematerialer",
-        description: "Vi støtter børn i Østtyrkiet, som mangler helt basale ting til skolen – f.eks. skoleuniform, skoletaske, penalhus og bøger. Skolegangen er afgørende for at børnene kan have en lysere fremtid. Med en skolepakke får flere børn mulighed for at komme i skole og tage et vigtigt skridt mod et bedre liv.",
-        image: "/logo-placeholder.jpg",
-        alt: "Mission",
-    },
+
+
     {
         title: "Mad og medicin",
         description: "Mange familier i Østtyrkiet har svært ved at få mad på bordet og adgang til nødvendig medicin. Vi donerer madkasser med fødevarer som ris, grøntsager og øvrige dagligvarer, samt medicin. Med denne støtte hjælper vi familierne med at sikre ernæring og en sundere hverdag for børnene i hjemmet.",
-        image: "/logo-placeholder.jpg",
+        image: "/images/mad-og-medicin.jpg",
+        alt: "Mission",
+    },
+    {
+        title: "Skolematerialer",
+        description: "Vi støtter børn i Østtyrkiet, som mangler helt basale ting til skolen – f.eks. skoleuniform, skoletaske, penalhus og bøger. Skolegangen er afgørende for at børnene kan have en lysere fremtid. Med en skolepakke får flere børn mulighed for at komme i skole og tage et vigtigt skridt mod et bedre liv.",
+        image: "/images/skolematerialer.PNG",
         alt: "Mission",
     },
     {
         title: "Tøj og varme",
         description: "I Østtyrkiet mangler mange børn varmt og tilstrækkeligt tøj til at komme igennem hverdagen – særligt i de kolde vintermåneder. Vi donerer tøj, sko og tæpper, som giver familierne en mere tryg og varm hverdag. Dette bidrag skaber tryghed og varme i en ellers udfordrende dagligdag.",
-        image: "/logo-placeholder.jpg",
+        image: "/images/toej-og-varme.avif",
         alt: "Mission",
     },
+
 ];
 
 export function VoresMission() {
     return (
-        <Container >
+        <Container className="max-w-7xl mx-auto" >
             <div className="space-y-4 text-center mb-8 sm:mb-10">
 
                 <h2 className="text-2xl font-bold sm:text-3xl uppercase">Vores indsats</h2>
@@ -47,7 +50,7 @@ export function VoresMission() {
                         className="flex flex-col overflow-hidden transition-shadow hover:shadow-md"
                     >
                         <CardHeader className="p-0">
-                            <div className="relative w-full aspect-16/10 sm:aspect-video overflow-hidden rounded-t-xl bg-muted">
+                            <div className="relative w-full aspect-16/10 sm:aspect-video overflow-hidden  bg-muted">
                                 <Image
                                     src={mission.image}
                                     alt={mission.alt}
