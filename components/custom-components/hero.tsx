@@ -7,18 +7,23 @@ import { Button } from "../ui/button";
 import Balancer from "react-wrap-balancer";
 import { Input } from "../ui/input";
 
-// Funktion der returnerer hvad et beløb svarer til
+const FIXED_AMOUNTS = [60, 105, 235, 540] as const;
+const IMPACT_540 = "kan en familie eksempelvis modtage en hjælpepakke med basale fornødenheder som mad, tæpper og hygiejneprodukter";
+
+// Funktion der returnerer hvad et beløb svarer til. Ved andre beløb end 60, 105, 235 eller 540 bruges altid 540-kr teksten.
 function getDonationImpact(amount: number): string {
+    if (amount <= 0) return "";
+    if (!FIXED_AMOUNTS.includes(amount as (typeof FIXED_AMOUNTS)[number])) {
+        return IMPACT_540;
+    }
     if (amount >= 540) {
-        return "støtter familiens månedlige madbudget";
+        return IMPACT_540;
     } else if (amount >= 235) {
-        return "kan du give en familie ro og tryghed med en madkasse, der sikrer mad på bordet";
+        return "kan du eksempelvis give en familie ro og tryghed med en madkasse, der sikrer mad på bordet";
     } else if (amount >= 105) {
-        return "kan et barn få nye støvler og en varm jakke til de kolde vintermåneder";
+        return "kan et barn eksempelvis få nye støvler og en varm jakke til de kolde vintermåneder";
     } else if (amount >= 60) {
         return "kan et barn eksempelvis få vigtige skoleredskaber – som skoletaske og penalhus";
-    } else if (amount > 0) {
-        return "gør en forskel for børn og familier";
     }
     return "";
 }
@@ -48,6 +53,7 @@ function Hero() {
 
     const displayAmount = selectedAmount ?? 0;
     const impact = getDonationImpact(displayAmount);
+    const impactAmount = FIXED_AMOUNTS.includes(displayAmount as (typeof FIXED_AMOUNTS)[number]) ? displayAmount : 540;
 
     async function handleStot() {
         if (!selectedAmount || selectedAmount < 10) return;
@@ -149,7 +155,7 @@ function Hero() {
                             {impact && (
                                 <div className="mb-6 rounded-lg bg-white/10 p-4 text-center">
                                     <p className="text-sm font-medium text-white">
-                                        {displayAmount} kr {impact}
+                                        {impactAmount} kr {impact}
                                     </p>
                                 </div>
                             )}
