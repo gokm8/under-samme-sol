@@ -105,7 +105,7 @@ function Hero() {
                     </div>
 
                     {/* CTA box */}
-                    <div className="w-full max-w-sm rounded-xl bg-white/10 p-8 text-white backdrop-blur flex flex-col justify-between mt-12 lg:mt-0">
+                    <div id="stot-boks" className="w-full max-w-sm rounded-xl bg-white/10 p-8 text-white backdrop-blur flex flex-col justify-between mt-12 lg:mt-0 scroll-mt-0">
                         <div>
                             <h2 className="mb-4 text-2xl font-semibold">
                                 Vælg dit bidrag

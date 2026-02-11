@@ -48,7 +48,7 @@ export function Footer() {
               UNDER SAMME SOL
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Vi arbejder for at alle kan leve under samme sol – med håb og muligheder.
+              Vi arbejder for at alle kan leve under samme sol – med samme håb og muligheder.
             </p>
           </div>
 
