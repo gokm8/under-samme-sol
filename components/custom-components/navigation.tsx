@@ -52,9 +52,9 @@ function Navigation({ items, className }: NavigationProps) {
                     <Image
                         src="/images/logo.png"
                         alt=""
-                        width={40}
-                        height={40}
-                        className="h-18 w-18 object-contain"
+                        width={64}
+                        height={64}
+                        className="h-14 w-14 sm:h-26 sm:w-26 object-contain"
                     />
                     UNDER SAMME SOL
                 </Link>
