@@ -155,7 +155,7 @@ function Hero() {
                             {impact && (
                                 <div className="mb-6 rounded-lg bg-white/10 p-4 text-center">
                                     <p className="text-sm font-medium text-white">
-                                        {impactAmount} kr {impact}
+                                        For {impactAmount} kr {impact}
                                     </p>
                                 </div>
                             )}
