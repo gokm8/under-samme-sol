@@ -1,10 +1,16 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 const MIN_AMOUNT_KR = 10;
 const MAX_AMOUNT_KR = 100000;
+
+function getStripe() {
+    const key = process.env.STRIPE_SECRET_KEY;
+    if (!key) {
+        throw new Error("STRIPE_SECRET_KEY er ikke sat i miljøvariabler");
+    }
+    return new Stripe(key);
+}
 
 export async function POST(request: Request) {
     try {
@@ -30,6 +36,7 @@ export async function POST(request: Request) {
         const baseUrl =
             process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
+        const stripe = getStripe();
         const session = await stripe.checkout.sessions.create({
             mode: "payment",
             payment_method_types: ["card", "mobilepay", ],
