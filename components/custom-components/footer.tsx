@@ -50,6 +50,12 @@ export function Footer() {
             <p className="text-sm text-muted-foreground max-w-xs">
               Vi arbejder for at alle kan leve under samme sol – med samme håb og muligheder.
             </p>
+            <Link
+              href="/privatlivspolitik"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm inline-block"
+            >
+              Privatlivspolitik
+            </Link>
           </div>
 
           {/* Menu */}
@@ -86,9 +92,6 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
               Kontakt os
             </h3>
-            <p className="text-sm text-muted-foreground max-w-xs">
-              Har du spørgsmål eller vil du høre mere? Vi glæder os til at høre fra dig.
-            </p>
             <div className="space-y-2">
               <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 E-mail

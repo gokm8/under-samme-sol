@@ -7,17 +7,17 @@ import { Button } from "../ui/button";
 import Balancer from "react-wrap-balancer";
 import { Input } from "../ui/input";
 
-const FIXED_AMOUNTS = [60, 105, 235, 540] as const;
-const IMPACT_540 = "kan en familie eksempelvis modtage en hjælpepakke med basale fornødenheder som mad, tæpper og hygiejneprodukter";
+const FIXED_AMOUNTS = [60, 105, 235, 500] as const;
+const IMPACT_500 = "kan en familie eksempelvis modtage en hjælpepakke med basale fornødenheder som mad, tæpper og hygiejneprodukter";
 
 // Funktion der returnerer hvad et beløb svarer til. Ved andre beløb end 60, 105, 235 eller 540 bruges altid 540-kr teksten.
 function getDonationImpact(amount: number): string {
     if (amount <= 0) return "";
     if (!FIXED_AMOUNTS.includes(amount as (typeof FIXED_AMOUNTS)[number])) {
-        return IMPACT_540;
+        return IMPACT_500;
     }
-    if (amount >= 540) {
-        return IMPACT_540;
+    if (amount >= 500) {
+        return IMPACT_500;
     } else if (amount >= 235) {
         return "kan du eksempelvis give en familie ro og tryghed med en madkasse, der sikrer mad på bordet";
     } else if (amount >= 105) {
@@ -29,7 +29,7 @@ function getDonationImpact(amount: number): string {
 }
 
 function Hero() {
-    const [selectedAmount, setSelectedAmount] = useState<number | null>(540);
+    const [selectedAmount, setSelectedAmount] = useState<number | null>(500);
     const [customAmount, setCustomAmount] = useState<string>("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -53,7 +53,7 @@ function Hero() {
 
     const displayAmount = selectedAmount ?? 0;
     const impact = getDonationImpact(displayAmount);
-    const impactAmount = FIXED_AMOUNTS.includes(displayAmount as (typeof FIXED_AMOUNTS)[number]) ? displayAmount : 540;
+    const impactAmount = FIXED_AMOUNTS.includes(displayAmount as (typeof FIXED_AMOUNTS)[number]) ? displayAmount : 500;
 
     async function handleStot() {
         if (!selectedAmount || selectedAmount < 10) return;
@@ -124,7 +124,7 @@ function Hero() {
                             {/* Amount options */}
                             <div className="mb-6 flex flex-col gap-3">
                                 <div className="grid grid-cols-2 gap-3">
-                                    {["60", "105", "235", "540"].map((amount) => {
+                                    {["60", "105", "235", "500"].map((amount) => {
                                         const isSelected = selectedAmount === parseInt(amount) && !customAmount;
                                         return (
                                             <Button
