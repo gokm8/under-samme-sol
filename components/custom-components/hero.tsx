@@ -9,7 +9,7 @@ import { Input } from "../ui/input";
 
 // Funktion der returnerer hvad et beløb svarer til
 function getDonationImpact(amount: number): string {
-    if (amount >= 550) {
+    if (amount >= 540) {
         return "støtter familiens månedlige madbudget";
     } else if (amount >= 235) {
         return "kan du give en familie ro og tryghed med en madkasse, der sikrer mad på bordet";
@@ -24,7 +24,7 @@ function getDonationImpact(amount: number): string {
 }
 
 function Hero() {
-    const [selectedAmount, setSelectedAmount] = useState<number | null>(60);
+    const [selectedAmount, setSelectedAmount] = useState<number | null>(540);
     const [customAmount, setCustomAmount] = useState<string>("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -118,7 +118,7 @@ function Hero() {
                             {/* Amount options */}
                             <div className="mb-6 flex flex-col gap-3">
                                 <div className="grid grid-cols-2 gap-3">
-                                    {["60", "105", "235", "550"].map((amount) => {
+                                    {["60", "105", "235", "540"].map((amount) => {
                                         const isSelected = selectedAmount === parseInt(amount) && !customAmount;
                                         return (
                                             <Button
@@ -167,7 +167,7 @@ function Hero() {
                             disabled={!selectedAmount || selectedAmount < 10 || loading}
                             onClick={handleStot}
                         >
-                            {loading ? "Venter..." : selectedAmount ? `Doner ${selectedAmount} kr` : "Doner nu"}
+                            {loading ? "Venter..." : selectedAmount ? `Donér ${selectedAmount} kr` : "Donér nu"}
                         </Button>
                     </div>
 

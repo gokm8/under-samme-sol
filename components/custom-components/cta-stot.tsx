@@ -17,7 +17,7 @@ type CtaStotProps = {
 
 export function CtaStot({
     title = "Din støtte kan gøre en forskel",
-    description = "Hver eneste donation går ubeskåret til dér, hvor behovet er størst hos børn og familier i nød",
+    description = "Dit bidrag går ubeskåret til børnene i Østtyrkiet og sikrer dem mad, varme og nødvendigt skoleudstyr. Hver donation kan gøre en forskel",
     buttonText = "STØT",
     buttonHref = "/stotte-os",
     imageSrc,
@@ -43,13 +43,13 @@ export function CtaStot({
                         )}
                     </div>
                     <div className={`flex flex-col justify-center p-6 sm:p-8 text-left bg-card ${reverse ? "lg:order-1" : ""}`}>
-                        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground mb-3">
+                        <h2 className="text-base sm:text-2xl font-black uppercase tracking-tight text-foreground mb-3">
                             {title}
                         </h2>
                         <p className="text-foreground text-sm sm:text-base mb-6 leading-relaxed">
                             {description}
                         </p>
-                        <Button asChild size="lg" className="w-fit font-bold uppercase">
+                        <Button asChild size="lg" className="font-bold uppercase text-lg sm:text-xl py-6 px-8 sm:py-7 sm:px-10">
                             <Link href={buttonHref}>{buttonText}</Link>
                         </Button>
                     </div>

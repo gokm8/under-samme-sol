@@ -3,30 +3,40 @@ import Link from "next/link";
 import { Container } from "../ds";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Balancer from "react-wrap-balancer";
+
 
 export function VoresIndsatser() {
     return (
-        <Container className="">
+        <Container className="max-w-7xl mx-auto">
             <div className="space-y-6 text-center mb-8 sm:mb-10">
 
-                <h2 className="text-2xl font-bold sm:text-3xl">Vores mission</h2>
+                <h2 className="text-2xl font-bold sm:text-3xl uppercase">
+                    <Balancer>Vores mission</Balancer>
+                </h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl border border-border bg-card shadow-sm">
                 {/* Venstre: tekst + CTA */}
                 <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10 text-left bg-card order-2 lg:order-1">
-                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4">
-                        Under Samme Sol er en forening, der bygger på en enkel, men stærk idé: at vi alle lever under den samme sol – og derfor også deler et ansvar for hinanden.
+                    <p className="text-foreground text-xl sm:text-2xl font-black leading-tight mb-4 uppercase">
+                        <Balancer>Under Samme Sol arbejder for, at alle børn i Østtyrkiet får lige muligheder</Balancer>
                     </p>
-                    <p className="text-foreground text-sm sm:text-base leading-relaxed mb-4">
-                        I Østtyrkiet lever mange børn under svære vilkår. Vi kan ikke ændre alt. Men vi kan ændre noget. Derfor indsamler vi, så fællesskab bliver til handling – og så mennesker i Danmark kan gøre en konkret forskel for børn, der ellers står uden støtte.
-                    </p>
-                    <p className="text-foreground font-medium text-sm sm:text-base mb-6">
-                        Vi gør det, fordi vi kan. Og fordi vi er Under Samme Sol.
-                    </p>
-                    <Button asChild size="lg" className="w-full sm:w-fit font-semibold">
-                        <Link href="#kontakt-os">Bliv fast støtte</Link>
-                    </Button>
+                    <div className="space-y-3 text-foreground/90 text-sm sm:text-base leading-relaxed mb-6">
+                        <p>Under Samme Sol er en forening, der bygger på en enkel, men stærk idé:
+                        </p>
+                        <p>At vi alle lever under samme sol – og derfor deler et ansvar for hinanden.
+                        </p>
+                        <p>Vores første projekt er en indsamling til Østtyrkiet, hvor mange børn lever under svære vilkår og mangler adgang til helt basale ting i hverdagen. Det kan være alt fra tøj og varme til skoleudstyr og mad på bordet.
+                        </p>
+
+                        <p><Balancer>Vi kan ikke ændre alt. <br /> Men vi kan ændre noget.</Balancer>
+                        </p>
+                        <p>Derfor skaber vi indsamlinger, hvor fællesskab bliver til handling. Hvor små bidrag bliver til reel hjælp. Og hvor mennesker i Danmark kan gøre en konkret forskel for børn i nød.
+                        </p>
+                        <p>Under Samme Sol er et fællesskab, der ikke vil se til, når børn lider.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Højre: billede */}

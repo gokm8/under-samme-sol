@@ -11,20 +11,20 @@ import { Badge } from "@/components/ui/badge"
 
 const mission = [
     {
-        title: "Fællesskab & Inklusion",
-        description: "Vi skaber trygge mødesteder, hvor alle føler sig velkomne. Gennem fælles aktiviteter og arrangementer styrker vi sammenhængskraften i lokalsamfundet.",
+        title: "Skolematerialer",
+        description: "Vi støtter børn i Østtyrkiet, som mangler helt basale ting til skolen – f.eks. skoleuniform, skoletaske, penalhus og bøger. Skolegangen er afgørende for at børnene kan have en lysere fremtid. Med en skolepakke får flere børn mulighed for at komme i skole og tage et vigtigt skridt mod et bedre liv.",
         image: "/logo-placeholder.jpg",
         alt: "Mission",
     },
     {
-        title: "Bæredygtighed",
-        description: "Vi arbejder for en grønnere fremtid med projekter inden for genbrug, energibesparelse og bevidst forbrug. Små skridt med stor betydning.",
+        title: "Mad og medicin",
+        description: "Mange familier i Østtyrkiet har svært ved at få mad på bordet og adgang til nødvendig medicin. Vi donerer madkasser med fødevarer som ris, grøntsager og øvrige dagligvarer, samt medicin. Med denne støtte hjælper vi familierne med at sikre ernæring og en sundere hverdag for børnene i hjemmet.",
         image: "/logo-placeholder.jpg",
         alt: "Mission",
     },
     {
-        title: "Uddannelse & Læring",
-        description: "Vi tilbyder kurser og workshops for alle aldre – fra børn til seniorer. Viden deles, kompetencer udvikles, og nye muligheder åbner sig.",
+        title: "Tøj og varme",
+        description: "I Østtyrkiet mangler mange børn varmt og tilstrækkeligt tøj til at komme igennem hverdagen – særligt i de kolde vintermåneder. Vi donerer tøj, sko og tæpper, som giver familierne en mere tryg og varm hverdag. Dette bidrag skaber tryghed og varme i en ellers udfordrende dagligdag.",
         image: "/logo-placeholder.jpg",
         alt: "Mission",
     },
@@ -35,9 +35,9 @@ export function VoresMission() {
         <Container >
             <div className="space-y-4 text-center mb-8 sm:mb-10">
 
-                <h2 className="text-2xl font-bold sm:text-3xl">Vores mission</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
-                    Vi arbejder på tværs af flere områder for at gøre en reel forskel i lokalsamfundet.
+                <h2 className="text-2xl font-bold sm:text-3xl uppercase">Vores indsats</h2>
+                <p className="text-gray-800 italic max-w-3xl mx-auto text-sm sm:text-base">
+                    Vi er til stede i Østtyrkiet og uddeler hjælpen direkte til de familier, der har mest brug for det. Gennem lokale partnere sikrer vi, at hjælpen indkøbes i nærområdet, så jeres donationer får størst mulig virkning
                 </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
