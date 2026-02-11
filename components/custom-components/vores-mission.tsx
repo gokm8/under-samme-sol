@@ -16,19 +16,19 @@ const mission = [
         title: "Mad og medicin",
         description: "Mange familier i Østtyrkiet har svært ved at få mad på bordet og adgang til nødvendig medicin. Vi donerer madkasser med fødevarer som ris, grøntsager og øvrige dagligvarer, samt medicin. Med denne støtte hjælper vi familierne med at sikre ernæring og en sundere hverdag for børnene i hjemmet.",
         image: "/images/mad-og-medicin.jpg",
-        alt: "Mission",
+        alt: "Mad og medicin",
     },
     {
         title: "Skolematerialer",
         description: "Vi støtter børn i Østtyrkiet, som mangler helt basale ting til skolen – f.eks. skoleuniform, skoletaske, penalhus og bøger. Skolegangen er afgørende for at børnene kan have en lysere fremtid. Med en skolepakke får flere børn mulighed for at komme i skole og tage et vigtigt skridt mod et bedre liv.",
         image: "/images/skolematerialer.PNG",
-        alt: "Mission",
+        alt: "Skolematerialer",
     },
     {
         title: "Tøj og varme",
         description: "I Østtyrkiet mangler mange børn varmt og tilstrækkeligt tøj til at komme igennem hverdagen – særligt i de kolde vintermåneder. Vi donerer tøj, sko og tæpper, som giver familierne en mere tryg og varm hverdag. Dette bidrag skaber tryghed og varme i en ellers udfordrende dagligdag.",
         image: "/images/toej-og-varme.avif",
-        alt: "Mission",
+        alt: "Tøj og varme",
     },
 
 ];
