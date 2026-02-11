@@ -39,7 +39,7 @@ export async function POST(request: Request) {
         const stripe = getStripe();
         const session = await stripe.checkout.sessions.create({
             mode: "payment",
-            payment_method_types: ["card", "mobilepay", ],
+            payment_method_types: ["card", "mobilepay"],
             line_items: [
                 {
                     price_data: {
