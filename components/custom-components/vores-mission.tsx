@@ -26,7 +26,7 @@ const mission = [
     },
     {
         title: "Tøj og varme",
-        description: "I Østtyrkiet mangler mange børn varmt og tilstrækkeligt tøj til at komme igennem hverdagen – særligt i de kolde vintermåneder. Vi donerer tøj, sko og tæpper, som giver familierne en mere tryg og varm hverdag. Dette bidrag skaber tryghed og varme i en ellers udfordrende dagligdag.",
+        description: "I Østtyrkiet mangler mange børn varmt og tilstrækkeligt tøj til at komme igennem hverdagen, særligt i de kolde vintermåneder. Vi donerer tøj, sko og tæpper, som giver familierne en mere tryg og varm hverdag. ",
         image: "/images/toej-og-varme.avif",
         alt: "Tøj og varme",
     },
