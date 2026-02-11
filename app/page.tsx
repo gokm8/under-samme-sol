@@ -43,7 +43,7 @@ export default function Home() {
 
 
 
-      <CtaStot imageSrc="/hero-section.jpg" imageAlt="Billede" />
+      <CtaStot imageSrc="/images/stot-os.PNG" imageAlt="Billede" />
 
       <Section id="vores-indsats" className="scroll-mt-20 bg-gray-100">
         <VoresMission />

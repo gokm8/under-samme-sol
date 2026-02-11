@@ -25,7 +25,7 @@ export function VoresIndsatser() {
                     <div className="space-y-3 text-foreground/90 text-sm sm:text-base leading-relaxed mb-6">
                         <p>Under Samme Sol er en forening, der bygger på en enkel, men stærk idé:
                         </p>
-                        <p>At vi alle lever under samme sol – og derfor deler et ansvar for hinanden.
+                        <p>At vi alle lever Under Samme Sol – og derfor deler et ansvar for hinanden.
                         </p>
                         <p>Vores første projekt er en indsamling til Østtyrkiet, hvor mange børn lever under svære vilkår og mangler adgang til helt basale ting i hverdagen. Det kan være alt fra tøj og varme til skoleudstyr og mad på bordet.
                         </p>
@@ -42,7 +42,7 @@ export function VoresIndsatser() {
                 {/* Højre: billede */}
                 <div className="relative min-h-[240px] sm:min-h-[320px] lg:min-h-0 aspect-video lg:aspect-auto bg-muted order-1 lg:order-2">
                     <Image
-                        src="/hero-section.jpg"
+                        src="/images/vores-mission.PNG"
                         alt="Under Samme Sol – børn og familier, der får støtte og tryghed"
                         fill
                         className="object-cover"
