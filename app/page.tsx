@@ -14,9 +14,14 @@ export default function Home() {
 
   // Alternative with image sources
   const techLogos = [
-    { src: "/images/din-virksomhed.png", alt: "Company 1" },
-    { src: "/images/din-virksomhed.png", alt: "Company 2" },
-    { src: "/images/din-virksomhed.png", alt: "Company 3" },
+    { src: "/logos/mb.png", alt: "mb-ejendomsservice ApS" },
+    { src: "/logos/familie-loft.png", alt: "Familie Løft ApS" },
+    { src: "/logos/crispy-burger.png", alt: "Crispy Burger ApS" },
+    { src: "/logos/nordic-tryk.png", alt: "Nordic Tryk ApS" },
+    { src: "/logos/next-level.png", alt: "Next Level ApS" },
+    { src: "/logos/blesco.png", alt: "Blesco ApS" },
+    { src: "/logos/tillids-baand.png", alt: "Tillidsbånd ApS" },
+    { src: "/logos/fø-revision.png", alt: "Fø-Revision ApS" },
   ];
 
   return (
@@ -30,7 +35,7 @@ export default function Home() {
           logos={techLogos}
           speed={50}
           direction="left"
-          logoHeight={60}
+          logoHeight={150}
           gap={60}
           hoverSpeed={0}
         />
