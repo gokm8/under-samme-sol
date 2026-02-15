@@ -22,6 +22,12 @@ export default function Home() {
     { src: "/logos/blesco.png", alt: "Blesco ApS" },
     { src: "/logos/tillids-baand.png", alt: "Tillidsbånd ApS" },
     { src: "/logos/fø-revision.png", alt: "Fø-Revision ApS" },
+    { src: "/logos/serhatYildiran.png", alt: "SYC ApS" },
+    { src: "/logos/salon-ck.png", alt: "Salon CK ApS" },
+    { src: "/logos/tiger-sandwich.png", alt: "Tiger Sandwich ApS" },
+    { src: "/logos/adem-stenovns.png", alt: "Adem Stenovns ApS" },
+    { src: "/logos/ankara-madhus.png", alt: "Ankara Madhus ApS" },
+    { src: "/logos/tempo-trafik.png", alt: "Tempo Trafik ApS" },
   ];
 
   return (
