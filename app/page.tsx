@@ -65,7 +65,7 @@ export default function Home() {
           hoverSpeed={0}
         />
         <LogoLoop
-          logos={techLogos}
+          logos={techLogosTwo}
           speed={75}
           direction="right"
           logoHeight={150}
