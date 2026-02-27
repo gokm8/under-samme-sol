@@ -434,7 +434,6 @@ export const LogoLoop = React.memo<LogoLoopProps>(
 
     return (
       <Container className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-4">Tak til vores sponsorer</h2>
         <div ref={containerRef} className={rootClasses} style={containerStyle} role="region" aria-label={ariaLabel}>
           {fadeOut && (
             <>
