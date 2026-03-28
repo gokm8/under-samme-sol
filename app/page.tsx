@@ -12,36 +12,47 @@ import { Footer } from "@/components/custom-components/footer";
 export default function Home() {
   // Alternative with image sources
   const techLogos = [
-    { src: "/logos/mb.png", alt: "mb-ejendomsservice ApS" },
-    { src: "/logos/familie-loft.png", alt: "Familie Løft ApS" },
-    { src: "/logos/crispy-burger.png", alt: "Crispy Burger ApS" },
-    { src: "/logos/nordic-tryk.png", alt: "Nordic Tryk ApS" },
-    { src: "/logos/next-level.png", alt: "Next Level ApS" },
-    { src: "/logos/blesco.png", alt: "Blesco ApS" },
-    { src: "/logos/tillids-baand.png", alt: "Tillidsbånd ApS" },
-    { src: "/logos/fø-revision.png", alt: "Fø-Revision ApS" },
-    { src: "/logos/serhatYildiran.png", alt: "SYC ApS" },
-    { src: "/logos/tiger-sandwich.png", alt: "Tiger Sandwich ApS" },
-    { src: "/logos/adem-stenovns.png", alt: "Adem Stenovns ApS" },
-    { src: "/logos/ankara-madhus.png", alt: "Ankara Madhus ApS" },
+    { src: "/logos/1.png", alt: "1" },
+    { src: "/logos/2.png", alt: "2" },
+    { src: "/logos/3.png", alt: "3" },
+    { src: "/logos/4.png", alt: "4" },
+    { src: "/logos/5.png", alt: "5" },
+    { src: "/logos/6.png", alt: "6" },
+    { src: "/logos/7.png", alt: "7" },
+    { src: "/logos/8.png", alt: "8" },
+    { src: "/logos/9.png", alt: "9" },
+    { src: "/logos/10.png", alt: "10" },
+    { src: "/logos/11.png", alt: "11" },
+    { src: "/logos/12.png", alt: "12" },
+    { src: "/logos/13.png", alt: "13" },
+    { src: "/logos/14.png", alt: "14" },
+    { src: "/logos/15.png", alt: "15" },
+    { src: "/logos/16.png", alt: "16" },
+    { src: "/logos/17.png", alt: "17" },
   ];
 
   const techLogosTwo = [
-    { src: "/logos2/53.png", alt: "logo53" },
-    { src: "/logos2/54.png", alt: "logo54" },
-    { src: "/logos2/55.png", alt: "logo55" },
-    { src: "/logos2/56.png", alt: "logo56" },
-    { src: "/logos2/57.png", alt: "logo57" },
-    { src: "/logos2/58.png", alt: "logo58" },
-    { src: "/logos2/59.png", alt: "logo59" },
-    { src: "/logos2/60.png", alt: "logo60" },
-    { src: "/logos2/61.png", alt: "logo61" },
-    { src: "/logos2/62.png", alt: "logo62" },
-    { src: "/logos2/63.png", alt: "logo63" },
-    { src: "/logos2/64.png", alt: "logo64" },
-    { src: "/logos2/65.png", alt: "logo65" },
-    { src: "/logos2/66.png", alt: "logo66" },
-    { src: "/logos2/67.png", alt: "logo67" },
+    { src: "/logos/18.png", alt: "18" },
+    { src: "/logos/19.png", alt: "19" },
+    { src: "/logos/20.png", alt: "20" },
+    { src: "/logos/21.png", alt: "21" },
+    { src: "/logos/21.png", alt: "21" },
+    { src: "/logos/22.png", alt: "22" },
+    { src: "/logos/23.png", alt: "23" },
+    { src: "/logos/24.png", alt: "24" },
+    { src: "/logos/25.png", alt: "25" },
+    { src: "/logos/26.png", alt: "26" },
+    { src: "/logos/27.png", alt: "27" },
+    { src: "/logos/28.png", alt: "28" },
+    { src: "/logos/29.png", alt: "29" },
+    { src: "/logos/30.png", alt: "30" },
+    { src: "/logos/31.png", alt: "31" },
+    { src: "/logos/32.png", alt: "32" },
+    { src: "/logos/32.png", alt: "32" },
+    { src: "/logos/33.png", alt: "33" },
+    { src: "/logos/34.png", alt: "34" },
+    { src: "/logos/35.png", alt: "35" },
+    { src: "/logos/36.png", alt: "36" },
   ];
 
   return (
@@ -50,7 +61,7 @@ export default function Home() {
         <Hero />
       </Section>
 
-      <Section>
+      <Section className="bg-secondary">
         <h2 className="text-2xl font-bold text-center mb-4">
           Tak til vores sponsorer
         </h2>
