@@ -10,8 +10,7 @@ import { KontaktOs } from "@/components/custom-components/kontakt-os";
 import { Footer } from "@/components/custom-components/footer";
 
 export default function Home() {
-  // Alternative with image sources
-  const techLogos = [
+  const sponsorLogos = [
     { src: "/logos/1.png", alt: "1" },
     { src: "/logos/2.png", alt: "2" },
     { src: "/logos/3.png", alt: "3" },
@@ -29,9 +28,6 @@ export default function Home() {
     { src: "/logos/15.png", alt: "15" },
     { src: "/logos/16.png", alt: "16" },
     { src: "/logos/17.png", alt: "17" },
-  ];
-
-  const techLogosTwo = [
     { src: "/logos/18.png", alt: "18" },
     { src: "/logos/19.png", alt: "19" },
     { src: "/logos/20.png", alt: "20" },
@@ -50,7 +46,19 @@ export default function Home() {
     { src: "/logos/34.png", alt: "34" },
     { src: "/logos/35.png", alt: "35" },
     { src: "/logos/36.png", alt: "36" },
+    { src: "/logos/37.png", alt: "37" },
+    { src: "/logos/38.png", alt: "38" },
+    { src: "/logos/39.png", alt: "39" },
+    { src: "/logos/40.png", alt: "40" },
+    { src: "/logos/41.png", alt: "41" },
+    { src: "/logos/42.png", alt: "42" },
+    { src: "/logos/43.png", alt: "43" },
+    { src: "/logos/44.png", alt: "44" },
   ];
+
+  const splitAt = Math.ceil(sponsorLogos.length / 2);
+  const techLogos = sponsorLogos.slice(0, splitAt);
+  const techLogosTwo = sponsorLogos.slice(splitAt);
 
   return (
     <>
